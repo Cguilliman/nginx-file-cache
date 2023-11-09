@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+
+  nginx:
+    container_name: nginx-images
+    build:
+      context: ./nginx
+    volumes:
+      - ./nginx/images:/files/images/
+    ports:
+      - "80:80"
